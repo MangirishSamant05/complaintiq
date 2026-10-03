@@ -45,6 +45,7 @@ class DataConfig(BaseModel):
     drift_files: list[str]
     text_column: str
     label_column: str
+    columns: dict[str, str]
 
 
 class Settings(BaseModel):

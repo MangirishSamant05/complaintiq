@@ -34,3 +34,19 @@ data:
     - CCDB_Export_16_March_2026.zip
   text_column: "Consumer complaint narrative"
   label_column: "Product"
+  # Raw CSV column -> clean name used everywhere after ingest.
+  # Only these columns are kept. Change the LEFT side if CFPB renames a column;
+  # keep the RIGHT side unchanged (the code relies on these names).
+  columns:
+    "Complaint ID": complaint_id
+    "Date received": date_received
+    "Product": product
+    "Sub-product": sub_product
+    "Issue": issue
+    "Sub-issue": sub_issue
+    "Consumer complaint narrative": narrative
+    "Company": company
+    "State": state
+    "Submitted via": submitted_via
+    "Company response to consumer": company_response
+    "Timely response?": timely_response
