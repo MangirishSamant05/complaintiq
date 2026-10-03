@@ -50,3 +50,13 @@ data:
     "Submitted via": submitted_via
     "Company response to consumer": company_response
     "Timely response?": timely_response
+
+cleaning:
+  min_chars: 50             # shorter narratives carry almost no signal
+  max_per_product: 10000    # cap per class for the modelling set
+  sample_per_product: 45    # rows per class in the small CSV committed to Git
+  near_dup:
+    num_perm: 64            # MinHash signature length
+    bands: 16               # LSH bands (num_perm must be divisible by bands)
+    shingle_words: 3        # word 3-grams
+    threshold: 0.7          # estimated Jaccard similarity to count as near-duplicate

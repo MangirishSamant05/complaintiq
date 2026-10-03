@@ -48,10 +48,25 @@ class DataConfig(BaseModel):
     columns: dict[str, str]
 
 
+class NearDupConfig(BaseModel):
+    num_perm: int = 64
+    bands: int = 16
+    shingle_words: int = 3
+    threshold: float = 0.7
+
+
+class CleaningConfig(BaseModel):
+    min_chars: int = 50
+    max_per_product: int = 10_000
+    sample_per_product: int = 45
+    near_dup: NearDupConfig = NearDupConfig()
+
+
 class Settings(BaseModel):
     project: ProjectConfig
     paths: PathsConfig
     data: DataConfig
+    cleaning: CleaningConfig = CleaningConfig()
     env: Literal["dev", "test", "prod"] = "dev"
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = "INFO"
 

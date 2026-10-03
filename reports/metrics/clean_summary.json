@@ -1,0 +1,117 @@
+{
+  "train_funnel": {
+    "input": 1356376,
+    "after_drop_missing": 1356376,
+    "after_drop_duplicate_ids": 1356376,
+    "after_min_chars": 1354569,
+    "after_exact_dedup": 662643,
+    "after_cap": 94348
+  },
+  "drift_funnel": {
+    "input": 21640,
+    "after_drop_missing": 21640,
+    "after_drop_duplicate_ids": 21640,
+    "after_min_chars": 21638,
+    "after_remove_seen_in_train": 20652,
+    "after_remove_unknown_products": 20652,
+    "after_exact_dedup": 18950
+  },
+  "model_set_rows": 94348,
+  "near_dup_groups": 86112,
+  "rows_in_multi_member_groups": 9641,
+  "largest_group_size": 1967,
+  "drift_rows": 18950,
+  "drift_products": {
+    "Debt collection": 6017,
+    "Checking or savings account": 3445,
+    "Credit card": 3341,
+    "Money transfer, virtual currency, or money service": 1640,
+    "Mortgage": 1257,
+    "Vehicle loan or lease": 1003,
+    "Student loan": 704,
+    "Payday loan, title loan, personal loan, or advance loan": 669,
+    "Credit reporting or other personal consumer reports": 456,
+    "Prepaid card": 216,
+    "Debt or credit management": 202
+  },
+  "by_product": [
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "after_filters": 1035992,
+      "unique_texts": 411404,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.603
+    },
+    {
+      "product": "Debt collection",
+      "after_filters": 104813,
+      "unique_texts": 73164,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.302
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "after_filters": 61293,
+      "unique_texts": 34145,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.443
+    },
+    {
+      "product": "Checking or savings account",
+      "after_filters": 52537,
+      "unique_texts": 47984,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.087
+    },
+    {
+      "product": "Credit card",
+      "after_filters": 45767,
+      "unique_texts": 42241,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.077
+    },
+    {
+      "product": "Mortgage",
+      "after_filters": 15883,
+      "unique_texts": 15863,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.001
+    },
+    {
+      "product": "Student loan",
+      "after_filters": 12707,
+      "unique_texts": 12513,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.015
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "after_filters": 11093,
+      "unique_texts": 10981,
+      "in_model_set": 10000,
+      "exact_dup_rate": 0.01
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "after_filters": 7329,
+      "unique_texts": 7264,
+      "in_model_set": 7264,
+      "exact_dup_rate": 0.009
+    },
+    {
+      "product": "Prepaid card",
+      "after_filters": 4521,
+      "unique_texts": 4469,
+      "in_model_set": 4469,
+      "exact_dup_rate": 0.012
+    },
+    {
+      "product": "Debt or credit management",
+      "after_filters": 2634,
+      "unique_texts": 2615,
+      "in_model_set": 2615,
+      "exact_dup_rate": 0.007
+    }
+  ],
+  "seconds": 234.1
+}
