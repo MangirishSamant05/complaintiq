@@ -1,0 +1,25 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---------- Secrets / machine-specific ----------
+.env
+
+# ---------- Data & artifacts (large, regenerable) ----------
+data/raw/*
+data/interim/*
+data/processed/*
+!data/**/.gitkeep
+models/*
+!models/.gitkeep
+logs/
+
+# ---------- OS / editor ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

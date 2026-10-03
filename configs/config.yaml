@@ -1,0 +1,36 @@
+# =============================================================
+# ComplaintIQ - central configuration
+# Every script reads settings from here. Change values here,
+# never hard-code them inside Python files.
+# =============================================================
+
+project:
+  name: complaintiq
+  seed: 42              # one seed for every random step -> reproducible results
+
+# All paths are relative to the project root folder.
+paths:
+  raw: data/raw              # downloaded zip files (never edited)
+  interim: data/interim      # narratives extracted to Parquet
+  processed: data/processed  # cleaned, split, model-ready data
+  sample: data/sample        # small sample committed to GitHub
+  gold: data/gold            # hand-labelled evaluation sets
+  models: models             # trained model artifacts
+  reports: reports           # metrics JSON + figures
+  logs: logs                 # log files
+
+data:
+  base_url: "https://files.consumerfinance.gov/f/documents/"
+  # Training window: April 2024 - June 2025
+  train_files:
+    - CCDB_Export_6_April_2024_through_July_2024.zip
+    - CCDB_Export_7_August_2024_through_October_2024.zip
+    - CCDB_Export_8_November_2024_through_December_2024.zip
+    - CCDB_Export_9_January_2025_through_February_2025.zip
+    - CCDB_Export_10_March_2025_through_April_2025.zip
+    - CCDB_Export_11_May_2025_through_June_2025.zip
+  # Held-out future data to measure model drift
+  drift_files:
+    - CCDB_Export_16_March_2026.zip
+  text_column: "Consumer complaint narrative"
+  label_column: "Product"
